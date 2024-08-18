@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  font-family: "Poppins", "sans-serif";
+}
+
+html {
+  font-size: 62.2%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  color: #555555;
+  overflow-x: hidden;
+}
+
+header {
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background: transparent;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.Logo {
+  font-size: 3rem;
+  color: #34495e;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.Logo:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  font-size: 1.8rem;
+  margin-left: 4rem;
+  color: #555555;
+  font-weight: 500;
+  transition: 0.3 ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #34495e;
+  border-bottom: 3px solid;
+}
+
+section {
+  padding: 5rem 9% 5rem;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.home .home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+span {
+  color: #34495e;
+}
+
+.home-content p {
+  font-size: 1.7rem;
+  margin-top: 3rem;
+}
+
+.home-content h3 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-bottom: 3px solid #34495e;
+}
+
+.home-img {
+  border-radius: 50%;
+}
+
+.home-img img {
+  position: relative;
+  width: 32vw;
+  box-shadow: 0 0 25px solid #34495e;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.typing-text {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.typing-text span {
+  position: relative;
+}
+
+.typing-text span::before {
+  content: "Mahasiswa Darmajaya";
+  color: #34495e;
+  animation: words 20s infinite;
+}
+
+.typing-text span::after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: calc(100% +8px);
+  height: 100%;
+  border-left: 3px solid;
+  right: -8;
+  animation: cursor 0.6s infinite;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10rem;
+}
+
+.kotak1,
+.kotak2,
+.kotak3 {
+  border: 2px solid #34495e;
+  padding: 15px;
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.kotak1 img,
+.kotak2 img,
+.kotak3 img {
+  width: 200px;
+}
+
+.kotak1:hover,
+.kotak2:hover,
+.kotak3:hover {
+  transform: scale(1.05);
+  transition: 0.8s ease;
+  cursor: pointer;
+}
+
+.kotak1 h2,
+.kotak2 h2,
+.kotak3 h2 {
+  color: #34495e;
+  font-size: 2rem;
+}
+.kotak1 p,
+.kotak2 p,
+.kotak3 p {
+  font-size: 1.5rem;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: none;
+}
+
+.menu-icon img {
+  width: 30px;
+  height: auto;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid;
+  }
+}
+
+@keyframes words {
+  0%,
+  50% {
+    content: "Mahasiswa Darmajaya";
+  }
+
+  51%,
+  100% {
+    content: "Web Designer";
+  }
+}
+
+@media (max-width: 995px) {
+  nav {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border-left: 1px solid #34495e;
+    border-bottom: 3px solid #34495e;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-top: 0.1rem solid;
+    transform: translateX(100%);
+    transition: transform 0.3 ease;
+  }
+
+  nav.active {
+    display: block;
+    transform: translateX(0);
+    height: 100vh;
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    border-bottom: 1px solid #333;
+    border-radius: 0.5rem;
+  }
+
+  nav a:hover,
+  nav a.active {
+    padding: 1rem;
+    color: #0056b3;
+  }
+
+  .home {
+    flex-direction: column;
+    margin: 5rem 4rem;
+  }
+  .home .home-content h3 {
+    font-size: 2.5rem;
+  }
+  .home .home-content h1 {
+    font-size: 5rem;
+  }
+  .home-img img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 150px;
+  }
+
+  .kotak1,
+  kotak2,
+  kotak3 h2 {
+    font-size: 2.5rem;
+  }
+
+  .kotak1,
+  .kotak2,
+  .kotak3 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .kotak1 img,
+  .kotak2 img,
+  .kotak3 img {
+    width: 80px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  .home {
+    gap: 4rem;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <!-- header start -->
+    <header>
+      <a href="#" class="Logo">Skill</a>
+
+      <!-- Navigasi start -->
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="skill.html" class="active">Skill</a>
+        <a href="project.html">Project Pribadi</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <!-- navigasi end -->
+      <div class="menu-icon">
+        <img src="/assets/img/navbar icon.png" alt="Icon Menu" />
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Section start -->
+    <div class="container">
+      <div class="kotak1">
+        <img src="/assets/img/skill1.jpg" />
+        <h2>Problem Solving</h2>
+        <p>Mampu memecahkan permasalahan pada komputer</p>
+      </div>
+      <div class="kotak2">
+        <img src="/assets/img/skill2.jpg" />
+        <h2>Coding</h2>
+        <p>Menguasai Html, Css dan dapat belajar bahasa pemograman yang lain</p>
+      </div>
+      <div class="kotak3">
+        <img src="/assets/img/skill3.jpg" />
+        <h2>Adaptasi</h2>
+        <p>Dapat ber adaptasi dalam pembelajaran maupun pekerjaan.</p>
+      </div>
+    </div>
+
+    <script>
+      const nav = document.querySelector("nav");
+      const menuIcon = document.querySelector(".menu-icon");
+
+      menuIcon.addEventListener("click", (event) => {
+        event.stopPropagation();
+        nav.classList.toggle("active");
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!nav.contains(event.target) && !menuIcon.contains(event.target)) {
+          nav.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
