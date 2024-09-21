@@ -15,8 +15,8 @@
     <!-- Navigasi start -->
     <nav>
       <a href="index.html">Home</a>
-      <a href="skill.html">Skill</a>
-      <a href="Project.html" class="active" >Project Pribadi</a>
+      <a href="sertifikat.html">Sertifikat</a>
+      <a href="Project.html" class="active">Project Pribadi</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="menu-icon">
@@ -54,14 +54,11 @@
         </div>
       </div>
       <div class="card">
-        <img src="./assets/img/project1.png" alt="project 1" />
+        <img src="./assets/img/project3.png" alt="project 1" />
         <div class="card-content">
           <h3>Proyek 3</h3>
-          <p>Ini adalah project utama saya belajar css dan html</p>
-          <a
-            href="https://shiro-root.github.io/mywebsite/#home"
-            target="_blank"
-            class="card-button"
+          <p>Project dari tugas dicoding Pemograman web dasar</p>
+          <a href="https://shiro-root.github.io/tugasweb/" class="card-button"
             >Lihat Project</a
           >
         </div>
@@ -89,11 +86,11 @@
         nav.classList.toggle("active");
       });
 
-      document.addEventListener("click", (event) =>{
-        if (!nav.contains(event.target) && !menuIcon.contains(event.target)){
+      document.addEventListener("click", (event) => {
+        if (!nav.contains(event.target) && !menuIcon.contains(event.target)) {
           nav.classList.remove("active");
         }
-      })
+      });
     </script>
   </body>
 </html>
