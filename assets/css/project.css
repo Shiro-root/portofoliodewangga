@@ -75,7 +75,7 @@ section.container {
   overflow: hidden;
   width: 300px;
   margin-left: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   transition: transform 0.3 ease;
   background-color: #fff;
 }
