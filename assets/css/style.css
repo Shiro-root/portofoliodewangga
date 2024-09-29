@@ -192,7 +192,6 @@ span {
   height: auto;
 }
 
-
 @keyframes cursor {
   to {
     border-left: 3px solid;
@@ -294,8 +293,6 @@ span {
   .menu-icon {
     display: block;
   }
-
-
 }
 @media (max-width: 1000px) {
   .home {
